@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twin Eye Photography</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/aos.css">
+    <link rel="stylesheet" href="./css/Style.css">
+
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-menu">
+            <div class="nav-brand">
+                <a href="Home.html" class="title">Photography</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="link"><a href="Home.html">Home</a></li>
+                    <li class="link"><a href="About us.html">About us</a></li>
+                    <li class="link"><a href="Portolio.html">Portolio</a></li>
+                    <li class="link"><a href="Contact us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="socialmedia-icons">
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+    
+    <section class = "section-five">
+        <div class = "container">
+            <div class = "sec-five-top">
+                <h3>CONTACT US</h3>
+                <h2>“Photography is a way of feeling of touching of loving”</h2>
+                <p>Twin Eye Photography is a High Professional team with new Photographic skills and technology. We have experienced in photography for 05 years. With the experience we could gain we always try to give you a new and a quality product through our Photography.</br></br>We are specialized in Wedding Photography, Baby Photography, Event Photography, Catalog Photography, Fashion  Photography.So far we could fulfill our clients’ expectations and also we could save memorable events for their future.</br></br>We, Twin Eye Photography undertake custom wedding photography packages as well. You are free to discuss with our crew and we are always welcome and respect our client’s ideas.We focus on your natural emotions and feelings without forcing or embarrassing you.That’s what we are specialized in.For further information don’t hesitate to contact us. We are always here to serve your needs.</p>
+            </div>
+
+            <div class = "sec-five-mid">
+                <div>
+                    <span class = "icon">
+                        <i class = "fas fa-map-signs"></i>
+                    </span>
+                    <span>Address</span>
+                    <p>Main Street - 54224, Kolonnawa, Colombo 10100</p>
+                </div>
+
+                <div>
+                    <span class = "icon">
+                        <i class = "fas fa-phone"></i>
+                    </span>
+                    <span>Contact Number</span>
+                    <p>078 645 0938</p>
+                </div>
+
+                <div>
+                    <span class = "icon">
+                        <i class = "fas fa-paper-plane"></i>
+                    </span>
+                    <span>Email Address</span>
+                    <p>TwinEye@gmail.com</p>
+                </div>
+
+                <div>
+                    <span class = "icon">
+                        <i class = "fas fa-globe"></i>
+                    </span>
+                    <span>Website</span>
+                    <p>www.TwinEyePhotography.com</p>
+                </div>
+            </div>
+            <br>
+            <div class = "contact-bottom">
+                <form class = "form" name="submit-to-google-sheet">
+                    <input type = "text" name="Name" placeholder="Your Name" required>
+                    <input type = "email" name="Email" placeholder="Your Email" required>
+                    <input type = "text" name="Subject" placeholder="Subject" required>
+                    <textarea name="Message" rows = "9" placeholder="Message" required></textarea>
+                    <button class="btn" type="submit">Submit</button>     
+                    <span class="form-message"></span>      
+                </form>                     
+                <div>
+                    <iframe src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=kolonnawa &amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="600px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <footer>
+        <div class="footer-content">
+            <h3>Twin Eye Photography</h3>
+            <p>We are specialized in Wedding Photography, Baby Photography, Event Photography, Catalog Photography, Fashion Photography.So far we could fulfill our clients’ expectations and also we could save memorable events for their future.</p>
+        </div>
+        <div class="copyrights-section">
+            <hr>
+            <p>copyright &copy; 2022 Twin Eye Photography. Design + Code by <a href="#">Pinil_Dissanayaka</a></p>
+        </div>
+    </footer>
+
+    <script src="./js/Jquery3.4.1.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxeCBYxgjj4-_HotB9vCYG6sxxAMC4-dwvc_omv1fMwocC9jpV1z3hPN2Tiz2JSwbB_/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const form-message = document.getElementById("form-message")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                form-message.innerHTML = "Your Message Send Sucsessfully"
+                setTimeout(function(){
+                    form-message.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
